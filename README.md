@@ -43,16 +43,16 @@ ArtEmotion is a Python-based API that transforms emotions into various forms of 
    source .venv/bin/activate  # On Windows: .venv\Scripts\activate
    ```
 
-3. Install dependencies:
+3. Install dependencies using `uv`:
 
    ```bash
-   pip install -r requirements.txt
+   uv install
    ```
 
-4. Run the API server:
+4. Run the API server with Uvicorn:
 
    ```bash
-   python -m app.main
+   uvicorn app.main:app --reload
    ```
 
 The server will run on `http://localhost:8000` by default.
@@ -69,8 +69,8 @@ The server will run on `http://localhost:8000` by default.
   {
     "emotion": "string",
     "art_form": "string",
-    "style": "string (optional)",
-    "language": "string (optional)",
+    "style": "string",
+    "language": "string",
     "context": "string (optional)"
   }
   ```
@@ -92,9 +92,9 @@ The server will run on `http://localhost:8000` by default.
 
 - **Emotion**: (Required) The primary emotion or mood to convey.
 - **Art Form**: (Required) The desired artistic output (e.g., poetry, short story, visual description).
-- **Style**: (Optional) The tone or style for the output (e.g., romantic, surreal).
+- **Style**: The tone or style for the output (e.g., romantic, surreal).
 - **Language**: (Optional) The language for the output (e.g., English, Spanish).
-- **Context**: (Optional) Additional details or scenarios for the generated content.
+- **Context**: Additional details or scenarios for the generated content.
 
 ---
 

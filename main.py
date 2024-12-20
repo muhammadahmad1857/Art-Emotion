@@ -9,8 +9,8 @@ app =  FastAPI()
  
 llm =  GoogleGenerativeAI(model="gemini-1.5-flash", api_key=os.getenv("API_KEY"))
  
-@app.get("/emotion")
-def get_emotion(emotion:str,art_form:str,style:str,context:str,language:str):
+@app.get("/generate")
+def get_emotion(emotion:str,art_form:str,style:str,context:str,language:str="English"):
     
     prompt = f"""
 You are an advanced Emotion-to-Art Generator. Your purpose is to translate human emotions and descriptive inputs into artistic outputs.
