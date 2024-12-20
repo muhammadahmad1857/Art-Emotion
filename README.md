@@ -32,8 +32,8 @@ ArtEmotion is a Python-based API that transforms emotions into various forms of 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/artemotion.git
-   cd artemotion
+   git clone https://github.com/muhammadahmad1857/Art-Emotion.git
+   cd Art-Emotion
    ```
 
 2. Create and activate a virtual environment:
